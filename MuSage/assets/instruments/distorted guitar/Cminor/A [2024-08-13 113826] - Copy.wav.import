@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7cmcb3vbf7eu"
+path="res://.godot/imported/A [2024-08-13 113826] - Copy.wav-417d571a59a1f45a1f38f6024b1acf0d.sample"
+
+[deps]
+
+source_file="res://assets/instruments/distorted guitar/Cminor/A [2024-08-13 113826] - Copy.wav"
+dest_files=["res://.godot/imported/A [2024-08-13 113826] - Copy.wav-417d571a59a1f45a1f38f6024b1acf0d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

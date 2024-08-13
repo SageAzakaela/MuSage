@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://b7mjexud3r4qw"]
+
+[ext_resource type="Texture2D" uid="uid://c7dppw1js1fil" path="res://assets/textures/environments/house_1.png" id="1_f3rxa"]
+[ext_resource type="Texture2D" uid="uid://ehawvd3qfdo6" path="res://assets/textures/characters/xael/Xael_Basic.png" id="2_jls88"]
+[ext_resource type="Script" path="res://Xael.gd" id="2_oklwu"]
+[ext_resource type="AudioStream" uid="uid://50o128qy4kob" path="res://assets/bgmusic/MuSage_VillageTheme.wav" id="4_jm5k6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_famir"]
+radius = 68.0
+height = 342.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="House" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="House"]
+position = Vector2(16, -170)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_f3rxa")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="House"]
+position = Vector2(16, -170)
+scale = Vector2(0.25, 0.25)
+polygon = PackedVector2Array(-200, 464, -236, 504, -524, 524, -572, 296, -572, 56, -560, -140, -556, -228, 68, -608, 652, -100, 560, 28, 536, 496, -16, 516, -44, 500, -44, 312, -88, 268, -132, 280, -172, 324)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-19, 5)
+scale = Vector2(0.25, 0.25)
+script = ExtResource("2_oklwu")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_jls88")
+hframes = 4
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CapsuleShape2D_famir")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(2, 2)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jm5k6")
+volume_db = -8.0
+autoplay = true
+bus = &"BackingTrack"
