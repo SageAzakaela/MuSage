@@ -1,124 +1,124 @@
-[gd_scene load_steps=25 format=3 uid="uid://c1vqe1mleaxn5"]
+[gd_scene load_steps=24 format=3 uid="uid://c1vqe1mleaxn5"]
 
 [ext_resource type="Script" path="res://code/GuitarPlayer.gd" id="1_rfcay"]
 [ext_resource type="Script" path="res://code/BeatKeeper.gd" id="1_vsqgt"]
-[ext_resource type="Script" path="res://resources/Pattern.gd" id="2_5t8kc"]
-[ext_resource type="AudioStream" uid="uid://h514tgne8t24" path="res://assets/instruments/distorted guitar/Cminor/A [2024-08-13 113826].wav" id="2_85j03"]
-[ext_resource type="AudioStream" uid="uid://d6wmy4xygqa" path="res://assets/instruments/distorted guitar/Cminor/S [2024-08-13 113827].wav" id="3_85tik"]
-[ext_resource type="AudioStream" uid="uid://du7mxshpgjdou" path="res://assets/instruments/distorted guitar/Cminor/D [2024-08-13 113828].wav" id="4_p1u2n"]
-[ext_resource type="AudioStream" uid="uid://72ey5o7pddkh" path="res://assets/instruments/distorted guitar/Cminor/F [2024-08-13 113829].wav" id="5_e6a5w"]
-[ext_resource type="AudioStream" uid="uid://bk8txpthqg74o" path="res://assets/instruments/distorted guitar/Cminor/J [2024-08-13 113829].wav" id="6_tgwso"]
-[ext_resource type="AudioStream" uid="uid://cvxevpvcuyt56" path="res://assets/instruments/distorted guitar/Cminor/K [2024-08-13 113830].wav" id="7_hw86u"]
-[ext_resource type="AudioStream" uid="uid://bjhlvfyxte0ep" path="res://assets/instruments/distorted guitar/Cminor/L [2024-08-13 113831].wav" id="8_w0mvf"]
-[ext_resource type="AudioStream" uid="uid://fqo5raqhsr0m" path="res://assets/instruments/distorted guitar/Cminor/colon [2024-08-13 113832].wav" id="9_ytjmr"]
-[ext_resource type="AudioStream" uid="uid://d1hxiq2g43csf" path="res://assets/LoopCminor98BPM.wav" id="10_6j8ie"]
-[ext_resource type="AudioStream" uid="uid://b7cmcb3vbf7eu" path="res://assets/instruments/distorted guitar/Cminor/A [2024-08-13 113826] - Copy.wav" id="13_0u2tw"]
-[ext_resource type="AudioStream" uid="uid://dawao06yjqinq" path="res://assets/instruments/distorted guitar/Cminor/S [2024-08-13 113827] - Copy.wav" id="14_c453n"]
-[ext_resource type="AudioStream" uid="uid://ci5j5ee5sqh44" path="res://assets/instruments/distorted guitar/Cminor/D [2024-08-13 113828] - Copy.wav" id="15_uyonf"]
-[ext_resource type="AudioStream" uid="uid://bo8rkqf1ew1cp" path="res://assets/instruments/distorted guitar/Cminor/F [2024-08-13 113829] - Copy.wav" id="16_x5ta5"]
-[ext_resource type="AudioStream" uid="uid://bsahqpklvvfcj" path="res://assets/instruments/distorted guitar/Cminor/J [2024-08-13 113829] - Copy.wav" id="17_vtanp"]
-[ext_resource type="AudioStream" uid="uid://md758yh2hjpq" path="res://assets/instruments/distorted guitar/Cminor/K [2024-08-13 113830] - Copy.wav" id="18_mnn6y"]
-[ext_resource type="AudioStream" uid="uid://8pqp2qegfoe5" path="res://assets/instruments/distorted guitar/Cminor/L [2024-08-13 113831] - Copy.wav" id="19_3ft6k"]
-[ext_resource type="AudioStream" uid="uid://xmwxxvspd5x2" path="res://assets/instruments/distorted guitar/Cminor/colon [2024-08-13 113832] - Copy.wav" id="20_yabb0"]
-
-[sub_resource type="Resource" id="Resource_x8gt4"]
-script = ExtResource("2_5t8kc")
-Sequence = Array[String](["A", "S", "D", "F", "A", "S", "D", "F"])
-Points = 20
-
-[sub_resource type="Resource" id="Resource_1b4r1"]
-script = ExtResource("2_5t8kc")
-Sequence = Array[String](["F", "S", "F", "S", "D", "A", "D", "A"])
-Points = 50
-
-[sub_resource type="Resource" id="Resource_fnoyq"]
-script = ExtResource("2_5t8kc")
-Sequence = Array[String]([";", "L", "K", "J", "F", "D", "S", "A"])
-Points = 100
-
-[sub_resource type="Resource" id="Resource_ycs52"]
-script = ExtResource("2_5t8kc")
-Sequence = Array[String](["P", ";", "P", ";", "Q", "A", "Q", "A"])
-Points = 500
+[ext_resource type="Resource" uid="uid://dm5n0hdt8j3c4" path="res://resources/user_made_patterns/user_pattern_7954.tres" id="2_mib37"]
+[ext_resource type="Resource" uid="uid://ct7438agibkmm" path="res://resources/user_made_patterns/user_pattern_7785.tres" id="3_aridk"]
+[ext_resource type="Resource" uid="uid://y3etyvvdypjo" path="res://resources/user_made_patterns/user_pattern_28792.tres" id="4_cw7j2"]
+[ext_resource type="Script" path="res://PatternRecorder.gd" id="4_sv48d"]
+[ext_resource type="AudioStream" uid="uid://ca0gd8qg7ui3g" path="res://assets/BackingCminor120.wav" id="5_3w1ts"]
+[ext_resource type="AudioStream" uid="uid://chcwth2exd7oj" path="res://assets/instruments/distorted guitar/C_Minor/A [2024-08-14 174250].wav" id="7_yyivu"]
+[ext_resource type="AudioStream" uid="uid://c581y72t7askn" path="res://assets/instruments/distorted guitar/C_Minor/S [2024-08-14 174251].wav" id="8_18pwm"]
+[ext_resource type="AudioStream" uid="uid://bif0l45dejytd" path="res://assets/instruments/distorted guitar/C_Minor/D [2024-08-14 174252].wav" id="9_ps6nl"]
+[ext_resource type="AudioStream" uid="uid://cvrt6tv0rd8v4" path="res://assets/instruments/distorted guitar/C_Minor/F [2024-08-14 174253].wav" id="10_gpl0o"]
+[ext_resource type="AudioStream" uid="uid://cgoppxtfb8yjc" path="res://assets/instruments/distorted guitar/C_Minor/J [2024-08-14 174254].wav" id="11_2t6c0"]
+[ext_resource type="AudioStream" uid="uid://c8ovumieq5kyt" path="res://assets/instruments/distorted guitar/C_Minor/K [2024-08-14 174255].wav" id="12_11jpo"]
+[ext_resource type="AudioStream" uid="uid://bfbb8tcd1soj1" path="res://assets/instruments/distorted guitar/C_Minor/L [2024-08-14 174256].wav" id="13_2hp8a"]
+[ext_resource type="AudioStream" uid="uid://dn7gqed1ncuhf" path="res://assets/instruments/distorted guitar/C_Minor/_ [2024-08-14 174257].wav" id="14_6ftxw"]
+[ext_resource type="AudioStream" uid="uid://blcyewa4tiqhc" path="res://assets/instruments/distorted guitar/C_Minor/Q [2024-08-14 174257].wav" id="15_8oyep"]
+[ext_resource type="AudioStream" uid="uid://br3me3tnaq3u0" path="res://assets/instruments/distorted guitar/C_Minor/W [2024-08-14 174258].wav" id="16_g8vwd"]
+[ext_resource type="AudioStream" uid="uid://bkmm1x8q7avx6" path="res://assets/instruments/distorted guitar/C_Minor/E [2024-08-14 174259].wav" id="17_rfvoe"]
+[ext_resource type="AudioStream" uid="uid://jf8hnvvfu2dh" path="res://assets/instruments/distorted guitar/C_Minor/R [2024-08-14 174300].wav" id="18_k5g6r"]
+[ext_resource type="AudioStream" uid="uid://brj18epn271pw" path="res://assets/instruments/distorted guitar/C_Minor/U [2024-08-14 174301].wav" id="19_b4c6u"]
+[ext_resource type="AudioStream" uid="uid://c1li4mmqejmtu" path="res://assets/instruments/distorted guitar/C_Minor/I [2024-08-14 174302].wav" id="20_227ad"]
+[ext_resource type="AudioStream" uid="uid://7auf80ds5hmp" path="res://assets/instruments/distorted guitar/C_Minor/O [2024-08-14 174303].wav" id="21_hwuyp"]
+[ext_resource type="AudioStream" uid="uid://evu0y18dakvc" path="res://assets/instruments/distorted guitar/C_Minor/P [2024-08-14 174304].wav" id="22_usjri"]
 
 [node name="Control" type="Node2D"]
 
 [node name="BeatKeeper" type="Node" parent="."]
 script = ExtResource("1_vsqgt")
-BPM = 98
-patterns = Array[ExtResource("2_5t8kc")]([SubResource("Resource_x8gt4"), SubResource("Resource_1b4r1"), SubResource("Resource_fnoyq"), SubResource("Resource_ycs52")])
+patterns = Array[Resource("res://resources/Pattern.gd")]([ExtResource("2_mib37"), ExtResource("3_aridk"), ExtResource("4_cw7j2")])
 
 [node name="BackingTrack" type="AudioStreamPlayer" parent="BeatKeeper"]
-stream = ExtResource("10_6j8ie")
-volume_db = 7.495
+stream = ExtResource("5_3w1ts")
 bus = &"BackingTrack"
+
+[node name="PatternRecorder" type="Node" parent="BeatKeeper"]
+script = ExtResource("4_sv48d")
 
 [node name="GuitarPlayer" type="Node" parent="."]
 script = ExtResource("1_rfcay")
 
 [node name="_A" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("2_85j03")
-volume_db = -16.0
+stream = ExtResource("7_yyivu")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_S" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("3_85tik")
-volume_db = -16.0
+stream = ExtResource("8_18pwm")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_D" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("4_p1u2n")
-volume_db = -16.0
+stream = ExtResource("9_ps6nl")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_F" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("5_e6a5w")
-volume_db = -16.0
+stream = ExtResource("10_gpl0o")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_J" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("6_tgwso")
-volume_db = -16.0
+stream = ExtResource("11_2t6c0")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_K" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("7_hw86u")
-volume_db = -16.0
+stream = ExtResource("12_11jpo")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_L" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("8_w0mvf")
-volume_db = -16.0
+stream = ExtResource("13_2hp8a")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_colon" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("9_ytjmr")
-volume_db = -16.0
+stream = ExtResource("14_6ftxw")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_Q" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("13_0u2tw")
-volume_db = -16.0
+stream = ExtResource("15_8oyep")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_W" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("14_c453n")
-volume_db = -16.0
+stream = ExtResource("16_g8vwd")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_E" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("15_uyonf")
-volume_db = -16.0
+stream = ExtResource("17_rfvoe")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_R" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("16_x5ta5")
-volume_db = -16.0
+stream = ExtResource("18_k5g6r")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_U" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("17_vtanp")
-volume_db = -16.0
+stream = ExtResource("19_b4c6u")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_I" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("18_mnn6y")
-volume_db = -16.0
+stream = ExtResource("20_227ad")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_O" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("19_3ft6k")
-volume_db = -16.0
+stream = ExtResource("21_hwuyp")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="_P" type="AudioStreamPlayer" parent="GuitarPlayer"]
-stream = ExtResource("20_yabb0")
-volume_db = -16.0
+stream = ExtResource("22_usjri")
+volume_db = -10.0
+bus = &"PlayerInstrument"
 
 [node name="beat_indicator" type="ColorRect" parent="."]
 offset_left = 867.0
@@ -135,35 +135,37 @@ offset_bottom = 411.0
 theme_override_font_sizes/font_size = 30
 text = "SCORE: 0"
 
-[node name="ScoreLabel2" type="Label" parent="."]
-offset_left = 127.0
-offset_top = 278.0
-offset_right = 256.0
-offset_bottom = 320.0
-theme_override_font_sizes/font_size = 30
-text = "Pattern 1: 20 points
-A,S,D,F,A,S,D,F
-
-Pattern 2: 50 points
-
-F,S,F,S,D,A,D,A
-
-
-Pattern 3: 100 points
-;,L,K,J,F,D,S,A"
-
 [node name="ScoreLabel3" type="Label" parent="."]
-offset_left = 801.0
-offset_top = 73.0
-offset_right = 1035.0
-offset_bottom = 115.0
+offset_left = 25.0
+offset_top = 12.0
+offset_right = 259.0
+offset_bottom = 54.0
 theme_override_font_sizes/font_size = 30
 text = "Recently Played:"
 
 [node name="ScoreLabel4" type="Label" parent="."]
-offset_left = 799.0
-offset_top = 143.0
-offset_right = 1033.0
-offset_bottom = 185.0
+offset_left = 44.0
+offset_top = 73.0
+offset_right = 447.0
+offset_bottom = 134.0
 theme_override_font_sizes/font_size = 30
 text = "Recently Played:"
+autowrap_mode = 1
+
+[node name="MagicNames" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 605.0
+offset_right = 1897.0
+offset_bottom = 1069.0
+theme_override_font_sizes/font_size = 30
+text = "Recently Played:"
+autowrap_mode = 2
+
+[node name="MagicEffect" type="Label" parent="."]
+offset_left = 1083.0
+offset_top = 16.0
+offset_right = 1847.0
+offset_bottom = 342.0
+theme_override_font_sizes/font_size = 30
+text = "Effect:"
+autowrap_mode = 2

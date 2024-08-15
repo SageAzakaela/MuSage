@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c5c5cv51nmse"
+path="res://.godot/imported/W [2024-08-13 170034].wav-cd56f15f9fb9082deef9cc6ff0b6a386.sample"
+
+[deps]
+
+source_file="res://assets/instruments/distorted guitar/C_Minor_Old/W [2024-08-13 170034].wav"
+dest_files=["res://.godot/imported/W [2024-08-13 170034].wav-cd56f15f9fb9082deef9cc6ff0b6a386.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
