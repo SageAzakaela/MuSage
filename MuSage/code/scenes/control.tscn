@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1vqe1mleaxn5"]
+
+[ext_resource type="Script" path="res://code/scripts/BeatKeeper.gd" id="1_vsqgt"]
+[ext_resource type="AudioStream" uid="uid://cpmdd81e3cyv8" path="res://assets/battlemusic/Cminor_140.mp3" id="2_4wyhk"]
+[ext_resource type="Script" path="res://code/scripts/PatternRecorder_2.gd" id="3_vgksh"]
+[ext_resource type="Script" path="res://code/scripts/recordinglabel.gd" id="5_ku0p8"]
+[ext_resource type="PackedScene" uid="uid://dri6a2scka4vs" path="res://code/scenes/guitar_player.tscn" id="9_sscfb"]
+
+[node name="Control" type="Node2D"]
+
+[node name="BeatKeeper" type="Node" parent="."]
+script = ExtResource("1_vsqgt")
+BPM = 140
+
+[node name="BackingTrack" type="AudioStreamPlayer" parent="BeatKeeper"]
+stream = ExtResource("2_4wyhk")
+bus = &"BackingTrack"
+
+[node name="PatternRecorder_2" type="Node" parent="BeatKeeper"]
+script = ExtResource("3_vgksh")
+DefaultPoints = 10
+DefaultEffectName = "Fireball 1"
+DefaultEffectDescription = "A ball of flame launches toward the enemy!"
+DefaultEnemyHealthAdjustment = 15
+
+[node name="GuitarPlayer" parent="." instance=ExtResource("9_sscfb")]
+
+[node name="beat_indicator" type="ColorRect" parent="."]
+offset_left = 867.0
+offset_top = 440.0
+offset_right = 978.0
+offset_bottom = 551.0
+color = Color(0, 0, 1, 1)
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 858.0
+offset_top = 369.0
+offset_right = 987.0
+offset_bottom = 411.0
+theme_override_font_sizes/font_size = 30
+text = "SCORE: 0"
+
+[node name="ScoreLabel3" type="Label" parent="."]
+offset_left = 25.0
+offset_top = 12.0
+offset_right = 259.0
+offset_bottom = 54.0
+theme_override_font_sizes/font_size = 30
+text = "Recently Played:"
+
+[node name="ScoreLabel4" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 73.0
+offset_right = 447.0
+offset_bottom = 134.0
+theme_override_font_sizes/font_size = 30
+text = "Recently Played:"
+autowrap_mode = 1
+
+[node name="MagicNames" type="Label" parent="."]
+offset_left = 30.0
+offset_top = 605.0
+offset_right = 1897.0
+offset_bottom = 1069.0
+theme_override_font_sizes/font_size = 30
+text = "Recently Played:"
+autowrap_mode = 2
+
+[node name="MagicEffect" type="Label" parent="."]
+offset_left = 1083.0
+offset_top = 16.0
+offset_right = 1847.0
+offset_bottom = 342.0
+theme_override_font_sizes/font_size = 30
+text = "Effect:"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 287.0
+offset_top = 22.0
+offset_right = 436.0
+offset_bottom = 45.0
+text = "Recording Disabled"
+script = ExtResource("5_ku0p8")

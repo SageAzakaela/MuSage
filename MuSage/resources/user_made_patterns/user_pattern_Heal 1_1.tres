@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Pattern" load_steps=2 format=3 uid="uid://xxjimjducv33"]
+
+[ext_resource type="Script" path="res://resources/Pattern.gd" id="1_50r1y"]
+
+[resource]
+script = ExtResource("1_50r1y")
+Sequence = Array[String](["P4", "U4", "R4", "E4", "P4", "U4", "R4", "E4"])
+Points = 10
+EffectName = "Heal 1"
+EffectDescription = "A blue light engulfs you."
+EnemyHealthAdjustment = 0
+PlayerHealthAdjustment = 15
+EnemyStatusEffect = ""
+PlayerStatusEffect = ""

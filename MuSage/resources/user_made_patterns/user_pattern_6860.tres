@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Pattern" load_steps=2 format=3 uid="uid://ct885fqvqj3t3"]
-
-[ext_resource type="Script" path="res://resources/Pattern.gd" id="1_kcwj3"]
-
-[resource]
-script = ExtResource("1_kcwj3")
-Sequence = Array[String](["F5", "D5", "S5", "A5", "F5", "D5", "S5", "A5"])
-Points = 80
-EffectName = "Force Blast!"

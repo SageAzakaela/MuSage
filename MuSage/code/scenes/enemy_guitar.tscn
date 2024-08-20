@@ -1,0 +1,87 @@
+[gd_scene load_steps=18 format=3 uid="uid://c41eygm6fx83d"]
+
+[ext_resource type="Script" path="res://code/scripts/EnemyGuitar.gd" id="1_ur7v0"]
+[ext_resource type="AudioStream" uid="uid://chcwth2exd7oj" path="res://assets/instruments/distorted guitar/C_Minor/A [2024-08-14 174250].wav" id="3_c1er2"]
+[ext_resource type="AudioStream" uid="uid://c581y72t7askn" path="res://assets/instruments/distorted guitar/C_Minor/S [2024-08-14 174251].wav" id="4_digl7"]
+[ext_resource type="AudioStream" uid="uid://bif0l45dejytd" path="res://assets/instruments/distorted guitar/C_Minor/D [2024-08-14 174252].wav" id="5_3gdyu"]
+[ext_resource type="AudioStream" uid="uid://cvrt6tv0rd8v4" path="res://assets/instruments/distorted guitar/C_Minor/F [2024-08-14 174253].wav" id="6_0aetj"]
+[ext_resource type="AudioStream" uid="uid://cgoppxtfb8yjc" path="res://assets/instruments/distorted guitar/C_Minor/J [2024-08-14 174254].wav" id="7_wm8pa"]
+[ext_resource type="AudioStream" uid="uid://c8ovumieq5kyt" path="res://assets/instruments/distorted guitar/C_Minor/K [2024-08-14 174255].wav" id="8_unfn0"]
+[ext_resource type="AudioStream" uid="uid://bfbb8tcd1soj1" path="res://assets/instruments/distorted guitar/C_Minor/L [2024-08-14 174256].wav" id="9_5fm5s"]
+[ext_resource type="AudioStream" uid="uid://dn7gqed1ncuhf" path="res://assets/instruments/distorted guitar/C_Minor/_ [2024-08-14 174257].wav" id="10_6owrf"]
+[ext_resource type="AudioStream" uid="uid://blcyewa4tiqhc" path="res://assets/instruments/distorted guitar/C_Minor/Q [2024-08-14 174257].wav" id="11_xdo1i"]
+[ext_resource type="AudioStream" uid="uid://br3me3tnaq3u0" path="res://assets/instruments/distorted guitar/C_Minor/W [2024-08-14 174258].wav" id="12_bylqe"]
+[ext_resource type="AudioStream" uid="uid://bkmm1x8q7avx6" path="res://assets/instruments/distorted guitar/C_Minor/E [2024-08-14 174259].wav" id="13_l6uxx"]
+[ext_resource type="AudioStream" uid="uid://jf8hnvvfu2dh" path="res://assets/instruments/distorted guitar/C_Minor/R [2024-08-14 174300].wav" id="14_om4gg"]
+[ext_resource type="AudioStream" uid="uid://brj18epn271pw" path="res://assets/instruments/distorted guitar/C_Minor/U [2024-08-14 174301].wav" id="15_v37om"]
+[ext_resource type="AudioStream" uid="uid://c1li4mmqejmtu" path="res://assets/instruments/distorted guitar/C_Minor/I [2024-08-14 174302].wav" id="16_mfc38"]
+[ext_resource type="AudioStream" uid="uid://7auf80ds5hmp" path="res://assets/instruments/distorted guitar/C_Minor/O [2024-08-14 174303].wav" id="17_ltffa"]
+[ext_resource type="AudioStream" uid="uid://evu0y18dakvc" path="res://assets/instruments/distorted guitar/C_Minor/P [2024-08-14 174304].wav" id="18_4ljb6"]
+
+[node name="EnemyGuitar" type="Node"]
+script = ExtResource("1_ur7v0")
+bars_per_cycle = 8
+
+[node name="_A" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_c1er2")
+volume_db = -16.0
+
+[node name="_S" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_digl7")
+volume_db = -16.0
+
+[node name="_D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3gdyu")
+volume_db = -16.0
+
+[node name="_F" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_0aetj")
+volume_db = -16.0
+
+[node name="_J" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_wm8pa")
+volume_db = -16.0
+
+[node name="_K" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_unfn0")
+volume_db = -16.0
+
+[node name="_L" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_5fm5s")
+volume_db = -16.0
+
+[node name="_colon" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_6owrf")
+volume_db = -16.0
+
+[node name="_Q" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_xdo1i")
+volume_db = -16.0
+
+[node name="_W" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_bylqe")
+volume_db = -16.0
+
+[node name="_E" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_l6uxx")
+volume_db = -16.0
+
+[node name="_R" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_om4gg")
+volume_db = -16.0
+
+[node name="_U" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_v37om")
+volume_db = -16.0
+
+[node name="_I" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_mfc38")
+volume_db = -16.0
+
+[node name="_O" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_ltffa")
+volume_db = -16.0
+
+[node name="_P" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_4ljb6")
+volume_db = -16.0

@@ -1,0 +1,591 @@
+[gd_scene load_steps=15 format=3 uid="uid://bdw62i8hmr3o7"]
+
+[ext_resource type="Script" path="res://Notes.gd" id="1_fd007"]
+[ext_resource type="Shader" path="res://Gradient.gdshader" id="1_hq2xb"]
+[ext_resource type="Texture2D" uid="uid://c1mmmju56tlsm" path="res://assets/textures/characters/xael/Xael_Sheet.png" id="1_kimi2"]
+[ext_resource type="Texture2D" uid="uid://dwtq4dqvtrlqr" path="res://assets/textures/creatures/slugula.png" id="2_lmjwr"]
+[ext_resource type="Script" path="res://code/scripts/PrototypeBattleBeatKeeper.gd" id="3_e0plr"]
+[ext_resource type="Script" path="res://code/scripts/PrototypeBadGuy.gd" id="8_3tmyb"]
+[ext_resource type="AudioStream" uid="uid://cpmdd81e3cyv8" path="res://assets/battlemusic/Cminor_140.mp3" id="15_02k4l"]
+[ext_resource type="PackedScene" uid="uid://dri6a2scka4vs" path="res://code/scenes/guitar_player.tscn" id="58_h0egc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a06nm"]
+bg_color = Color(0.6, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3nfu0"]
+bg_color = Color(0, 0.72549, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d6pqb"]
+shader = ExtResource("1_hq2xb")
+shader_parameter/topleft = Color(0.533333, 0, 0, 1)
+shader_parameter/topright = Color(0, 0, 0, 1)
+shader_parameter/bottomleft = Color(0, 0, 0, 1)
+shader_parameter/bottomright = Color(0.388235, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_7113s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/topleft")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.533333, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/topright")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/bottomleft")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material:shader_parameter/bottomright")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.388235, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wdu56"]
+resource_name = "fade"
+length = 8.0
+loop_mode = 1
+step = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/topleft")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.533333, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/topright")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0.686275, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:material:shader_parameter/bottomleft")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0.560784, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:material:shader_parameter/bottomright")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.388235, 0, 0, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dp7g3"]
+_data = {
+"RESET": SubResource("Animation_7113s"),
+"fade": SubResource("Animation_wdu56")
+}
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="EnemyHealth" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 78.0
+grow_horizontal = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_a06nm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3nfu0")
+value = 100.0
+
+[node name="PlayerHealth" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_a06nm")
+theme_override_styles/fill = SubResource("StyleBoxFlat_3nfu0")
+value = 100.0
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_d6pqb")
+layout_mode = 0
+offset_top = 78.0
+offset_right = 1920.0
+offset_bottom = 1000.0
+color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Background"]
+libraries = {
+"": SubResource("AnimationLibrary_dp7g3")
+}
+autoplay = "fade"
+
+[node name="Player" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 168.0
+offset_top = 288.0
+offset_right = 478.0
+offset_bottom = 788.0
+color = Color(0.184314, 0.184314, 0.184314, 1)
+
+[node name="Label" type="Label" parent="Player"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 142.0
+offset_right = 269.0
+offset_bottom = 217.0
+
+[node name="XaelSheet" type="Sprite2D" parent="."]
+position = Vector2(314, 538)
+scale = Vector2(5.04, 5.04)
+texture = ExtResource("1_kimi2")
+hframes = 8
+vframes = 3
+frame = 1
+
+[node name="Enemy" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1444.0
+offset_top = 288.0
+offset_right = 1754.0
+offset_bottom = 788.0
+color = Color(0.184314, 0.184314, 0.184314, 1)
+
+[node name="Label" type="Label" parent="Enemy"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 227.0
+offset_right = 239.0
+offset_bottom = 250.0
+text = "Enemyq Art Goes Here"
+
+[node name="XaelSheet2" type="Sprite2D" parent="."]
+position = Vector2(1576, 538)
+scale = Vector2(5.04, 5.04)
+texture = ExtResource("2_lmjwr")
+hframes = 4
+vframes = 3
+frame = 1
+
+[node name="EffectLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.305729
+anchor_top = 0.168519
+anchor_right = 0.660937
+anchor_bottom = 0.233333
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="EffectDescription" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.305729
+anchor_top = 0.1
+anchor_right = 0.660937
+anchor_bottom = 0.164814
+theme_override_font_sizes/font_size = 32
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Notes" type="GridContainer" parent="."]
+layout_mode = 0
+offset_top = 877.0
+offset_right = 1920.0
+offset_bottom = 965.0
+columns = 8
+script = ExtResource("1_fd007")
+
+[node name="Q" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Notes/Q"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quorion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="W" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 0.470588, 0, 1)
+
+[node name="Label" type="Label" parent="Notes/W"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Wyrn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 0, 1)
+
+[node name="Label" type="Label" parent="Notes/E"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Eldrox"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 1, 0, 1)
+
+[node name="Label" type="Label" parent="Notes/R"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Raelon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="U" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 1, 1, 1)
+
+[node name="Label" type="Label" parent="Notes/U"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Ulyss"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="I" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0.368627, 1, 1)
+
+[node name="Label" type="Label" parent="Notes/I"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Iryon"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="O" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.392157, 0, 1, 1)
+
+[node name="Label" type="Label" parent="Notes/O"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Orlun"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.654902)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.65098, 0, 1, 1)
+
+[node name="Label" type="Label" parent="Notes/P"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pyra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="A" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.282353)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Notes/A"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Axion"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="S" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.282353)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 0.470588, 0, 1)
+
+[node name="Label" type="Label" parent="Notes/S"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Siron"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="D" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.282353)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(1, 1, 0, 1)
+
+[node name="Label" type="Label" parent="Notes/D"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Drox"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="F" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.282353)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 1, 0, 1)
+
+[node name="Label" type="Label" parent="Notes/F"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Feron"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="J" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.282353)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 1, 1, 1)
+
+[node name="Label" type="Label" parent="Notes/J"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Jyn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="K" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.282353)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0.368627, 1, 1)
+
+[node name="Label" type="Label" parent="Notes/K"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Kyron"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="L" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.282353)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.392157, 0, 1, 1)
+
+[node name="Label" type="Label" parent="Notes/L"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lunor"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Semicolon" type="ColorRect" parent="Notes"]
+self_modulate = Color(1, 1, 1, 0.282353)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.65098, 0, 1, 1)
+
+[node name="Label" type="Label" parent="Notes/Semicolon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Syndra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BeatKeeper" type="Node" parent="."]
+script = ExtResource("3_e0plr")
+BPM = 140
+
+[node name="BackingTrack" type="AudioStreamPlayer" parent="BeatKeeper"]
+stream = ExtResource("15_02k4l")
+bus = &"BackingTrack"
+
+[node name="BadGuy" type="Node" parent="."]
+script = ExtResource("8_3tmyb")
+
+[node name="ScoreLabel3" type="Label" parent="."]
+layout_mode = 0
+anchor_top = 0.760185
+anchor_right = 0.121875
+anchor_bottom = 0.799074
+theme_override_font_sizes/font_size = 30
+text = "Recently Played:"
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoreLabel4" type="Label" parent="."]
+layout_mode = 0
+anchor_left = 0.14375
+anchor_top = 0.760185
+anchor_right = 0.984896
+anchor_bottom = 0.812037
+theme_override_font_sizes/font_size = 30
+text = "Recently Played:"
+autowrap_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GuitarPlayer" parent="." instance=ExtResource("58_h0egc")]

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=7 format=3 uid="uid://dwxgtal0sk7cu"]
+
+[ext_resource type="PackedScene" uid="uid://bquja8jyk8kbr" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Textbox/vn_textbox_layer.tscn" id="1_wmq5n"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_567ho"]
+[ext_resource type="PackedScene" uid="uid://dhk6j6eb6e3q" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_VN_Choices/vn_choice_layer.tscn" id="3_egpm6"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="9_mnxh2"]
+
+[sub_resource type="Resource" id="Resource_js7yu"]
+script = ExtResource("2_567ho")
+scene = ExtResource("1_wmq5n")
+overrides = {
+"box_margin_bottom": "90.0",
+"next_indicator_animation": "1",
+"text_alignment": "1",
+"typing_sounds_enabled": "false"
+}
+
+[sub_resource type="Resource" id="Resource_8vnhd"]
+script = ExtResource("2_567ho")
+scene = ExtResource("3_egpm6")
+overrides = {}
+
+[resource]
+script = ExtResource("9_mnxh2")
+name = "main_style"
+base_overrides = {}
+layers = Array[ExtResource("2_567ho")]([SubResource("Resource_js7yu"), SubResource("Resource_8vnhd")])
+metadata/_latest_layer = 0

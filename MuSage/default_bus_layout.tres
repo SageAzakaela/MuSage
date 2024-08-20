@@ -1,12 +1,16 @@
-[gd_resource type="AudioBusLayout" load_steps=2 format=3 uid="uid://gvpgiovwnaph"]
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://gvpgiovwnaph"]
 
 [sub_resource type="AudioEffectReverb" id="AudioEffectReverb_tywks"]
 resource_name = "Reverb"
-room_size = 0.5
-damping = 0.28
+predelay_msec = 300.0
+room_size = 0.6
+damping = 0.39
 spread = 0.9
 hipass = 0.15
-wet = 0.07
+wet = 0.21
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_dm88v"]
+resource_name = "Delay"
 
 [resource]
 bus/1/name = &"PlayerInstrument"
@@ -17,9 +21,17 @@ bus/1/volume_db = -5.04538
 bus/1/send = &"Master"
 bus/1/effect/0/effect = SubResource("AudioEffectReverb_tywks")
 bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectDelay_dm88v")
+bus/1/effect/1/enabled = true
 bus/2/name = &"BackingTrack"
 bus/2/solo = false
 bus/2/mute = false
 bus/2/bypass_fx = false
-bus/2/volume_db = -8.79822
+bus/2/volume_db = -1.71701
 bus/2/send = &"Master"
+bus/3/name = &"Ambience"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -3.11736
+bus/3/send = &"Master"

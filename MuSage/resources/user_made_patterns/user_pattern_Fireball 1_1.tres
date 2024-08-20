@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Pattern" load_steps=2 format=3 uid="uid://1jw4m3mdg3wg"]
+
+[ext_resource type="Script" path="res://resources/Pattern.gd" id="1_ggquy"]
+
+[resource]
+script = ExtResource("1_ggquy")
+Sequence = Array[String](["A4", "S4", "D4", "F4", "A4", "S4", "D4", "F4"])
+Points = 10
+EffectName = "Fireball 1"
+EffectDescription = "A ball of flame launches toward the enemy!"
+EnemyHealthAdjustment = 15
+PlayerHealthAdjustment = 0
+EnemyStatusEffect = ""
+PlayerStatusEffect = ""

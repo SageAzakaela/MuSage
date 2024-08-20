@@ -1,0 +1,102 @@
+[gd_scene load_steps=18 format=3 uid="uid://f4chc84048pp"]
+
+[ext_resource type="Script" path="res://code/scripts/GuitarPlayer.gd" id="1_ma61i"]
+[ext_resource type="AudioStream" uid="uid://csdtkhgtcc0g" path="res://assets/instruments/vox/c_minor/A (Freeze) [2024-08-18 102345].wav" id="2_xgyet"]
+[ext_resource type="AudioStream" uid="uid://c76f4hhr5k2qa" path="res://assets/instruments/vox/c_minor/S (Freeze) [2024-08-18 102347].wav" id="3_f04rx"]
+[ext_resource type="AudioStream" uid="uid://b03g8lm83gafl" path="res://assets/instruments/vox/c_minor/D (Freeze) [2024-08-18 102349].wav" id="4_0w7tv"]
+[ext_resource type="AudioStream" uid="uid://cdrym8denbi2q" path="res://assets/instruments/vox/c_minor/F (Freeze) [2024-08-18 102351].wav" id="5_bmca0"]
+[ext_resource type="AudioStream" uid="uid://cuxve0yhqoae3" path="res://assets/instruments/vox/c_minor/J (Freeze) [2024-08-18 102353].wav" id="6_3rrsv"]
+[ext_resource type="AudioStream" uid="uid://nmpji3i4xfbh" path="res://assets/instruments/vox/c_minor/K (Freeze) [2024-08-18 102355].wav" id="7_jvgjb"]
+[ext_resource type="AudioStream" uid="uid://vqcipnjiqy3c" path="res://assets/instruments/vox/c_minor/L (Freeze) [2024-08-18 102357].wav" id="8_118hx"]
+[ext_resource type="AudioStream" uid="uid://cuv2rqocn2y0r" path="res://assets/instruments/vox/c_minor/; (Freeze) [2024-08-18 102401].wav" id="9_ghyi8"]
+[ext_resource type="AudioStream" uid="uid://c7q82bftqxxan" path="res://assets/instruments/vox/c_minor/Q (Freeze) [2024-08-18 102402].wav" id="10_qak86"]
+[ext_resource type="AudioStream" uid="uid://cxveg4u3wv3aa" path="res://assets/instruments/vox/c_minor/W (Freeze) [2024-08-18 102404].wav" id="11_jhngs"]
+[ext_resource type="AudioStream" uid="uid://ct8qefj2156yb" path="res://assets/instruments/vox/c_minor/E (Freeze) [2024-08-18 102405].wav" id="12_82sdl"]
+[ext_resource type="AudioStream" uid="uid://j36n6vmcntj0" path="res://assets/instruments/vox/c_minor/R (Freeze) [2024-08-18 102407].wav" id="13_vaamt"]
+[ext_resource type="AudioStream" uid="uid://5pajynk3lwu4" path="res://assets/instruments/vox/c_minor/U (Freeze) [2024-08-18 102409].wav" id="14_nwkx4"]
+[ext_resource type="AudioStream" uid="uid://cuk3mas3tyt5v" path="res://assets/instruments/vox/c_minor/I (Freeze) [2024-08-18 102411].wav" id="15_uve31"]
+[ext_resource type="AudioStream" uid="uid://dcsc272fqx8vk" path="res://assets/instruments/vox/c_minor/O (Freeze) [2024-08-18 102413].wav" id="16_fxlye"]
+[ext_resource type="AudioStream" uid="uid://ovpy3x6k3col" path="res://assets/instruments/vox/c_minor/P (Freeze) [2024-08-18 102415].wav" id="17_hpupa"]
+
+[node name="GuitarPlayer" type="Node"]
+script = ExtResource("1_ma61i")
+
+[node name="_A" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xgyet")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_S" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_f04rx")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0w7tv")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_F" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_bmca0")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_J" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_3rrsv")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_K" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_jvgjb")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_L" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_118hx")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_colon" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_ghyi8")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_Q" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_qak86")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_W" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_jhngs")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_E" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_82sdl")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_R" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_vaamt")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_U" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_nwkx4")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_I" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("15_uve31")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_O" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_fxlye")
+volume_db = -10.0
+bus = &"PlayerInstrument"
+
+[node name="_P" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_hpupa")
+volume_db = -10.0
+bus = &"PlayerInstrument"

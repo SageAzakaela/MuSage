@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cuv2rqocn2y0r"
+path="res://.godot/imported/; (Freeze) [2024-08-18 102401].wav-8be5f60560f0c765367c0d9225aca6d2.sample"
+
+[deps]
+
+source_file="res://assets/instruments/vox/c_minor/; (Freeze) [2024-08-18 102401].wav"
+dest_files=["res://.godot/imported/; (Freeze) [2024-08-18 102401].wav-8be5f60560f0c765367c0d9225aca6d2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

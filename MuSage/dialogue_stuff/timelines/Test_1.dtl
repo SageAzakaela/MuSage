@@ -1,0 +1,15 @@
+[voice path="res://dialogue_stuff/VoiceActing/Axel_1.wav" volume="0.0"]
+Axel: Are you sure you wanna keep hanging out here?
+[voice path="res://dialogue_stuff/VoiceActing/Axel_2.wav" volume="0.0"]
+Axel: These slug things are gross.
+- Of course I do.
+	[voice path="res://dialogue_stuff/VoiceActing/Axel_Scene1_A1.wav" volume="0.0"]
+	Axel: Xael! I don't want to stay out too late. I've got stuff I gotta take care of in the morning.\
+I know you wanna hang out, but hanging out with the slugs is not what I had in mind.
+	[voice path="res://dialogue_stuff/VoiceActing/Axel_Scene1_A2.wav" volume="0.0"]
+	Axel: Plus I heard these things get kinda aggressive when the sun goes down.
+- Fine, lets go.
+	[voice path="res://dialogue_stuff/VoiceActing/Axel_Scene1_B1.wav" volume="0.0"]
+	Axel: UGh. Well now I feel bad.\
+\
+We can hang out with the slugs for a little while longer... I guess.

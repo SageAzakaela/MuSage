@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d37o3gcndvekd"]
+
+[ext_resource type="Script" path="res://code/scripts/PatternRecorder.gd" id="1_pkxf0"]
+
+[node name="PatternRecorder" type="Node"]
+script = ExtResource("1_pkxf0")

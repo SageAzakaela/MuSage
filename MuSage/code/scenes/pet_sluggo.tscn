@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://d2yhf4o2pqpoy"]
+
+[ext_resource type="Script" path="res://code/scripts/pet_sluggo.gd" id="1_2tjba"]
+[ext_resource type="Texture2D" uid="uid://dlhv76so6ppqf" path="res://assets/textures/creatures/pink_sluggo.png" id="2_10sto"]
+
+[sub_resource type="Animation" id="Animation_3sg6f"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_xdmy6"]
+resource_name = "move_down"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 6, 10, 2, 6, 10]
+}
+
+[sub_resource type="Animation" id="Animation_3tg6e"]
+resource_name = "move_left"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 5, 9, 1, 5, 9]
+}
+
+[sub_resource type="Animation" id="Animation_irpq6"]
+resource_name = "move_right"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 4, 8, 0, 4, 8]
+}
+
+[sub_resource type="Animation" id="Animation_v8kk2"]
+resource_name = "move_up"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 7, 11, 3, 7, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gyctk"]
+_data = {
+"RESET": SubResource("Animation_3sg6f"),
+"move_down": SubResource("Animation_xdmy6"),
+"move_left": SubResource("Animation_3tg6e"),
+"move_right": SubResource("Animation_irpq6"),
+"move_up": SubResource("Animation_v8kk2")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ocsfm"]
+radius = 37.0135
+
+[node name="Sluggo" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_2tjba")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_10sto")
+hframes = 4
+vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_gyctk")
+}
+speed_scale = 0.4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ocsfm")

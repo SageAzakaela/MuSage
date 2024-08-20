@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Pattern" load_steps=2 format=3 uid="uid://ct7438agibkmm"]
-
-[ext_resource type="Script" path="res://resources/Pattern.gd" id="1_jq73q"]
-
-[resource]
-script = ExtResource("1_jq73q")
-Sequence = Array[String](["P5", "O5", "I5", "U2", "P5", "O5", "I5", "U2"])
-Points = 80
-EffectName = "Ice Shard!"

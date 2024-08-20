@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Pattern" load_steps=2 format=3 uid="uid://y3etyvvdypjo"]
-
-[ext_resource type="Script" path="res://resources/Pattern.gd" id="1_hy7uc"]
-
-[resource]
-script = ExtResource("1_hy7uc")
-Sequence = Array[String](["P5", ";5", "P5", ";5", "P5", ";5", "P5", ";5"])
-Points = 80
-EffectName = "Lightning Spike!"
